@@ -8,14 +8,10 @@
         width: 100%;
     }
 }
-@media screen and (max-width: 620px) {
-    .profile{
-        width: 100%;
-    }
-}
 @media screen and (max-width: 568px) {
     .profile{
         width: 282px;
         flex-direction: column;
+        margin-top: 38.25px;
     }
 }

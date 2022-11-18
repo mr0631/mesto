@@ -1,6 +1,5 @@
 .elements__item-description {
     width: 100%;
-    min-height: 79px;
     background-color: #FFFFFF;
     margin: 0;
     border-bottom-left-radius: 10px;
@@ -8,6 +7,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px 0 21px;
+    padding: 25px 20px 31px 21px;
     box-sizing: border-box;
 }

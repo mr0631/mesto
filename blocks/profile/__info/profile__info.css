@@ -1,5 +1,4 @@
 .profile__info {
-  height: 73px;
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 24px;
@@ -8,9 +7,9 @@
 }
 @media screen and (max-width: 568px) {
   .profile__info{
-    height: 54px;
+    grid-template-columns: 1fr;
     grid-column-gap: 10px;
-  grid-row-gap: 14px;
+    grid-row-gap: 14px;
 
   }
 }

@@ -2,22 +2,19 @@
     margin: 67px auto 60px;
     width: 880px;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 910px) {
     .footer{
        max-width: 100%;
     }
 }
 @media screen and (max-width: 568px) {
     .footer{
-        max-width: 320px;
+        max-width: 282px;
         margin: 48px auto 36px;
-        
     }
 }
 @media screen and (max-width: 321px) {
     .footer{
-        
         margin-left: 19px;
-        
     }
 }
