@@ -11,11 +11,6 @@
     
     
 }
-.elements__item-like-button:active{
-    background-image: url("../../../images/serdce.svg");
-    
-}
-
 .elements__item-like-button:hover {
     opacity: 0.6;
     cursor: pointer;
