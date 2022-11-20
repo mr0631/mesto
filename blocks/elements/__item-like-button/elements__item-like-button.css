@@ -8,9 +8,10 @@
     background-size: contain;
     border: 0;
     background-color: rgba(0, 0, 0, 0);
-    
-    
+
+
 }
+
 .elements__item-like-button:hover {
     opacity: 0.6;
     cursor: pointer;

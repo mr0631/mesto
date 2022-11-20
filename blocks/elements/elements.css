@@ -5,12 +5,14 @@
     height: 361px;
     width: 282px;
 }
+
 @media screen and (max-width: 600px) {
     .elements {
         width: 100%;
 
     }
 }
+
 @media screen and (max-width: 568px) {
     .elements {
         max-width: 282px;

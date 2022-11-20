@@ -8,6 +8,7 @@
     margin: 51px auto 0;
     list-style-type: none;
 }
+
 @media screen and (max-width: 1124px) {
     .element {
         grid-template-columns: repeat(2, 1fr);
@@ -21,6 +22,7 @@
         grid-column-gap: 7px;
     }
 }
+
 @media screen and (max-width: 590px) {
     .elements {
         width: 100%;

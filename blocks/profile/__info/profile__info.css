@@ -5,8 +5,9 @@
   grid-column-gap: 18px;
   grid-row-gap: 16px;
 }
+
 @media screen and (max-width: 568px) {
-  .profile__info{
+  .profile__info {
     grid-template-columns: 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 14px;

@@ -1,4 +1,4 @@
-.popup__button-exit{
+.popup__button-exit {
     width: 32px;
     height: 32px;
     background-color: rgba(0, 0, 0, 0.0);
@@ -7,20 +7,22 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    margin-top: -40px;
-    margin-left: 440px;
+    margin-top: -74px;
+    margin-left: 402px;
     padding: 0;
 }
+
 .popup__button-exit:hover {
     opacity: 0.6;
     cursor: pointer;
 }
+
 @media screen and (max-width: 500px) {
-    .popup__button-exit{
+    .popup__button-exit {
         width: 20px;
         height: 20px;
-        margin-top: -36px;
-        margin-left: 262px;
+        margin-top: -63px;
+        margin-left: 240px;
         background-size: contain;
     }
 }
