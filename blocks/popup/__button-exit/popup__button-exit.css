@@ -7,8 +7,8 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    margin-top: -74px;
-    margin-left: 402px;
+    top: -40px;
+    right: -40px;
     padding: 0;
 }
 
@@ -21,8 +21,8 @@
     .popup__button-exit {
         width: 20px;
         height: 20px;
-        margin-top: -63px;
-        margin-left: 240px;
+        top: -36px;
+        right: 0;
         background-size: contain;
     }
 }
