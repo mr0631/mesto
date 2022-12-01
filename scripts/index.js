@@ -132,9 +132,9 @@ function openImagePopupCard (image, text) {
 
   function saveNewCard(evt) {
     evt.preventDefault();
-    const title = popupAddTitle.value;
-    const link = popupAddLink.value;
-    AddNewCard(link, title);
+    const name = popupAddTitle.value;
+    const linkImage = popupAddLink.value;
+    AddNewCard(linkImage, name);
     evt.target.reset();
     closePopupAdd();
   }
