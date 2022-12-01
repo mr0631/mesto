@@ -1,4 +1,4 @@
-.element {
+.cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fit, 1fr);
@@ -10,28 +10,23 @@
 }
 
 @media screen and (max-width: 1124px) {
-    .element {
+    .cards {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
 }
 
 @media screen and (max-width: 868px) {
-    .element {
+    .cards {
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 7px;
     }
 }
 
-@media screen and (max-width: 590px) {
-    .elements {
-        width: 100%;
-        grid-column-gap: 0;
-    }
-}
 
-@media screen and (max-width: 568px) {
-    .element {
+
+@media screen and (max-width: 610px) {
+    .cards {
         grid-template-columns: 1fr;
         max-width: 282px;
         margin-top: 36px;
