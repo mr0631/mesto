@@ -1,3 +1,4 @@
+const popup = document.querySelector("popup");
 const popupProfile = document.querySelector(".popup_form_edit");
 const popupOpenButtonElement = document.querySelector(".profile__edit-button");
 const popupSaveButtonElement = document.querySelector(".popup__button-save");
@@ -13,6 +14,13 @@ const formAdd = popupAdd.querySelector('.popup__form');
 const popupAddTitle = popupAdd.querySelector('.popup__input_form_title');
 const popupAddLink = popupAdd.querySelector('.popup__input_form_link');
 const popupButtonCreate = popupAdd.querySelector('.popup__button-save');
+const KEYESC = 'Escape';
+const closePopupEsc = (evt) => {
+  if (evt.key === KEYESC) {
+    closePopup(document.querySelector(`.popup_is-opened`));
+  }
+};
+
 
 popupOpenButtonElement.addEventListener('click', function() {              
   openPopup(popupProfile);                                       
@@ -24,13 +32,23 @@ popupOpenAddButton.addEventListener('click', function() {
 });
 
 function openPopup(popup) {
+  document.addEventListener('keydown', closePopupEsc);
   popup.classList.add('popup_is-opened');
 } 
 
 
 function closePopup(popup) {
+  document.removeEventListener('keydown', closePopupEsc);
   popup.classList.remove('popup_is-opened');
 }
+const handlePopupClose = (evt) => {
+    const isOverlay = evt.target.classList.contains("popup");
+    const isClose = evt.target.classList.contains("popup__button-exit");
+    if (isOverlay || isClose) {
+      closePopup();
+    }
+};
+
 const popupCloseButton = document.querySelectorAll('.popup__button-exit');
 
 popupCloseButton.forEach(closeButton => {
@@ -122,8 +140,8 @@ function openImagePopupCard (image, text) {
     cards.prepend(card);
   }
 
-  initialCards.forEach(function (Add) {
-    addNewCard(Add.link, Add.name);
+  initialCards.forEach(function (card) {
+    addNewCard(card.link, card.name);
   });
 
   function saveNewCard(evt) {
@@ -137,3 +155,13 @@ function openImagePopupCard (image, text) {
   
   formAdd.addEventListener('submit', saveNewCard);
   
+  const validationObjects = {
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__button-save',
+    inactiveButtonClass: '.popup__button-save_inactive',
+    inputErrorClass: '.popup__input-error',
+    errorClass: '.popup__input-error_active.',
+ }
+  
+ 
