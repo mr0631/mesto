@@ -37,12 +37,12 @@
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" name="profile_form"  novalidate>
                 <input type="text" class="popup__input popup__input_form_name" name="name" placeholder="Ваше Имя"
-                    value="" required minlength="2" maxlength="40">
-                   
+                    value="" required minlength="2" maxlength="40" id="profile-name">
+                    <span id="profile-name-error" class="popup__error"></span>
                 <input type="text" class="popup__input popup__input_form_job" name="job" placeholder="Место работы"
                     value="" required minlength="2"
-                    maxlength="200">
-                    
+                    maxlength="200" id="profile-description">
+                    <span id="profile-description-error" class="popup__error"></span>
                 <button class="popup__button-save" type="submit">Сохранить</button>
             </form>
         </div>
@@ -53,10 +53,10 @@
           <button class="popup__button-exit" type="button"></button>
           <h2 class="popup__title">Новое место</h2>
           <form class="popup__form" name="add_form">
-              <input class="popup__input popup__input_form_title" type="text" name="title" placeholder="Название" required minlength="2" maxlength="30">
-              
-              <input class="popup__input popup__input_form_link" type="text" name="link" placeholder="Ссылка на картинку" required>
-             
+              <input class="popup__input popup__input_form_title" type="text"  id="place-title" name="title" placeholder="Название" required minlength="2" maxlength="30">
+              <span id="place-title-error" class="popup__error"></span>
+              <input class="popup__input popup__input_form_link" type="url" id="place-link" name="link" placeholder="Ссылка на картинку" required>
+              <span id="place-link-error" class="popup__error"></span>
               <button class="popup__button-save" type="submit">Создать</button>
           </form>
         </div>
