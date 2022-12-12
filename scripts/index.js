@@ -20,6 +20,11 @@ const closePopupEsc = (evt) => {
     closePopup(document.querySelector(`.popup_is-opened`));
   }
 };
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("popup")) {
+    closePopup(e.target);
+  }
+});
 
 
 popupOpenButtonElement.addEventListener('click', function() {              
