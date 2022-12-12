@@ -19,6 +19,9 @@ const elementsValidators = {
 
     }
 }
+function buttonDisabled () {
+    button.classList.add(inactiveButtonClass);
+}
 const toggleSaveButton = (inputs, button, {inactiveButtonClass}) => {
     const isFormValid = inputs.every(input => input.validity.valid)
 

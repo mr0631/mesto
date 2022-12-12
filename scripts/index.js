@@ -110,11 +110,10 @@ const popupCardText = popupCard.querySelector('.popup-card__text');
 const popupOpenCard = document.querySelector('.popup-card');
 
 function openImagePopupCard (image, text) {
-  openPopup(popupCard);
     popupCardImage.setAttribute('src', image);
     popupCardText.textContent = text;
     popupCardImage.setAttribute('alt', text);
-    
+    openPopup(popupCard);
 
   }
   
@@ -154,19 +153,11 @@ function openImagePopupCard (image, text) {
     const name = popupAddTitle.value;
     const linkImage = popupAddLink.value;
     addNewCard(linkImage, name);
-    evt.target.reset();
     closePopup(popupAdd);
+    evt.target.reset();
   }
   
   formAdd.addEventListener('submit', saveNewCard);
-  
-  const validationObjects = {
-    formSelector: '.popup__form',
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__button-save',
-    inactiveButtonClass: '.popup__button-save_inactive',
-    inputErrorClass: '.popup__input-error',
-    errorClass: '.popup__input-error_active.',
- }
+
   
  
