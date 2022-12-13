@@ -129,7 +129,9 @@ function openImagePopupCard (image, text) {
     
     cardElement.querySelector('.card__item-like-button').addEventListener('click', function (like) {
       like.target.classList.toggle('card__item-like-button_active');  
+      console.log(like);
     });
+    
     cardElement.querySelector('.card__delete-button').addEventListener('click', function (del) {
       del.target.closest('.card').remove();
     });
