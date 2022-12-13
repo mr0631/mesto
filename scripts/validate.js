@@ -19,9 +19,6 @@ const elementsValidators = {
 
     }
 }
-function buttonDisabled () {
-    button.classList.add(inactiveButtonClass);
-}
 const toggleSaveButton = (inputs, button, {inactiveButtonClass}) => {
     const isFormValid = inputs.every(input => input.validity.valid)
 
@@ -34,6 +31,10 @@ const toggleSaveButton = (inputs, button, {inactiveButtonClass}) => {
         button.disabled = 'disabled';
     }
 }
+const disableButtonSave = (button, {inactiveButtonClass}) => {
+    button.classList.add(inactiveButtonClass);
+    button.disabled = 'disabled';
+}
 const enableValidation = ({formSelector, inputSelector, submitButtonSelector, ...restConfig} ) =>  {
 const forms = [...document.querySelectorAll(formSelector)]  
 forms.forEach(form => {
@@ -41,6 +42,7 @@ forms.forEach(form => {
     const button = form.querySelector(submitButtonSelector)
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+       disableButtonSave(button, restConfig);
     })
     inputs.forEach(input => {
         input.addEventListener('input', () => {
