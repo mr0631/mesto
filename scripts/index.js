@@ -2,8 +2,7 @@ import { Card } from "./card.js";
 import { FormValidator } from "./FormValidator.js";
 const popupProfile = document.querySelector(".popup_form_edit");
 const popupOpenProfileButton = document.querySelector(".profile__edit-button");
-const popupSaveButtonElement = document.querySelector(".popup__button-save");
-const formElement = document.querySelector(".popup__form");
+const formEdit = popupProfile.querySelector(".popup__form");
 const nameInput = document.querySelector(".popup__input_form_name");
 const jobInput = document.querySelector(".popup__input_form_job");
 const profileName = document.querySelector(".profile__title");
@@ -113,7 +112,7 @@ popupOpenAddButton.addEventListener("click", () => {
   validationPopupAdd.resetFormErrors();
   openPopup(popupAdd);
 });
-formElement.addEventListener("submit", function submitformHandler(evt) {
+formEdit.addEventListener("submit", function submitformHandler(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;

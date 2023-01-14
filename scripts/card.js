@@ -1,8 +1,8 @@
 export class Card {
     constructor(data, itemTemplateSelector, handleOpenImage) {
         this._data = data;
-        this._itemTemplate = document.querySelector(itemTemplateSelector).content.querySelector('.card');
-        this._itemElement = this._itemTemplate.cloneNode(true);
+        this._createCard = document.querySelector(itemTemplateSelector).content.querySelector('.card');
+        this._itemElement = this._createCard.cloneNode(true);
         this._itemDeleteButton = this._itemElement.querySelector('.card__delete-button');
         this._itemLikeButton = this._itemElement.querySelector('.card__item-like-button');
         this._cardImage = this._itemElement.querySelector('.card__image');
