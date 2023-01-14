@@ -8,7 +8,12 @@ export class Card {
         this._cardImage = this._itemElement.querySelector('.card__image');
         this._handleOpenImage = handleOpenImage;
     }
-   
+    _getTemplate() {
+        const createCard =
+        document.querySelector(itemTemplateSelector).content.querySelector('.card');
+
+        return createCard;
+    }
     _handleLikeButtonClick = () => {
         this._itemLikeButton.classList.toggle('card__item-like-button_active');
     }
