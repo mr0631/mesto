@@ -1,8 +1,9 @@
-import { Card } from "./card.js";
-import { FormValidator } from "./FormValidator.js";
+import  {Card}  from "./card.js";
+import  {FormValidator}  from "./FormValidator.js";
+import PopupWithImage from "./PopupWithImage.js";
 import { config, initialCards } from "./constant.js";
 import { popupProfile, popupOpenProfileButton, formEdit, nameInput, jobInput, profileName, profileJob, popupOpenAddButton, popupAdd, formAdd, popupAddTitle, popupAddLink, KEY_ESC, cards, popupCloseButtons, formElementAdd, popupCard, popupCardImage, popupCardText} from "./constant.js";
-
+const popupWithImage = new PopupWithImage({ popupSelector: ('.popup-card') });
 function openPopup(popup) {
   document.addEventListener("keydown", closePopupEsc); // открытие попапа
   popup.classList.add("popup_is-opened");
@@ -44,15 +45,12 @@ formEdit.addEventListener("submit", function submitformHandler(evt) {
  initialCards.forEach(render); // Получаем карточки
 
 function handleImageClick(data) {
-  popupCardText.textContent = data.name;
-  popupCardImage.src = data.link;
-  popupCardImage.alt = data.name;
-  openPopup(popupCard);
-}
-                                                                    // Добавления карточек из массива и открытие картинки 
+  popupWithImage.open(data.name, data.link);
+};
+
 function render(data) {
-  const item = new Card(data, "#card-template", handleImageClick); 
-  const newItem = item.createElement();
+  const item = new Card(data, "#card-template",  handleImageClick); 
+  const newItem = item.createElement();                               // Добавления карточек из массива и открытие картинки 
   cards.prepend(newItem);
 }
 
