@@ -1,0 +1,25 @@
+{
+  "name": "mesto",
+  "version": "1.0.0",
+  "description": "Проект: Место, Выполнен по учебной программе Яндекс практикума. Практическая работа 7.  Используемые технологии:     1.Языки HTML и CSS     2.Flexbox Верстка     3.Grid Layout     4.Медиа запросы для корректного отображения на всех устройствах     5.Организация файлов по БЭМ nested     6.JavaScript для интерактивности     7. Произведен рефакторинг кода с учетом ООП",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve"
+  }, 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr0631/mesto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mr0631/mesto/issues"
+  },
+  "homepage": "https://github.com/mr0631/mesto#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
