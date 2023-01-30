@@ -27,7 +27,7 @@ export class Card {
     }
 
     createElement() {
-       const itemImage = this._itemElement.querySelector('.card__image');
+        const itemImage = this._itemElement.querySelector('.card__image');
        const itemTitle = this._itemElement.querySelector('.card__item-title');
        itemTitle.textContent = this._data.name;
        itemImage.src = this._data.link;
