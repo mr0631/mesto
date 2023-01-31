@@ -11,14 +11,6 @@ export const popupAddTitle = popupAdd.querySelector(".popup__input_form_title");
 export const popupAddLink = popupAdd.querySelector(".popup__input_form_link");
 
 
-export const config = {
-  formSelector: ".popup__form",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button-save",
-  inactiveButtonClass: "popup__button-save_invalid",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visibility",
-};
 
 export const initialCards = [
   {

@@ -1,11 +1,11 @@
-import { Card } from "../src/scripts/components/card.js"
-import { FormValidator } from "../src/scripts/components/FormValidator.js";
-import { Section } from "../src/scripts/components/Section.js";
-import { PopupWithForm } from "../src/scripts/components/PopupWithForm.js";
-import { PopupWithImage } from "../src/scripts/components/PopupWithImage.js";
-import { UserInfo } from "../src/scripts/components/UserInfo.js";
-import {popupProfile, popupOpenProfileButton, nameInput, jobInput , popupOpenAddButton, popupAdd, formAdd, popupAddTitle, popupAddLink ,config , initialCards} from "../src/scripts/utils/constants.js"
-import "../src/index.css"
+import './pages/index.css';
+import { Card } from "./scripts/components/card.js"
+import { FormValidator } from "./scripts/components/FormValidator.js";
+import { Section } from "./scripts/components/Section.js";
+import { PopupWithForm } from "./scripts/components/PopupWithForm.js";
+import { PopupWithImage } from "./scripts/components/PopupWithImage.js";
+import { UserInfo } from "./scripts/components/UserInfo.js";
+import {popupProfile, popupOpenProfileButton, nameInput, jobInput , popupOpenAddButton, popupAdd, formAdd, popupAddTitle, popupAddLink , initialCards} from "./scripts/utils/constants.js"
 
 function renderCard(data) {
   const cardElement = new Card(data, '#card-template', handleImageClick);
@@ -67,8 +67,8 @@ const userInfo = new UserInfo({ selectorName: (".profile__title"), selectorProf:
     jobInput.value = prof;
   });
 
-const validationPopupProfile = new FormValidator(config, popupProfile);
+const validationPopupProfile = new FormValidator(popupProfile);
 validationPopupProfile.enableValidation();
 
-const validationPopupAdd = new FormValidator(config, formAdd);
+const validationPopupAdd = new FormValidator(formAdd);
 validationPopupAdd.enableValidation();
