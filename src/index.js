@@ -30,20 +30,27 @@ function handleImageClick(data) {
   popupWithImage.open(data.name, data.link);
 };
 
-const newCardFormPopup = new PopupWithForm({selectorPopup: (".popup_card_add"), 
-  handleFormSubmit});
+//const newCardFormPopup = new PopupWithForm({selectorPopup: (".popup_card_add"), 
+ // handleFormSubmit});
   
-  function handleFormSubmit() {
-    const data = {
-      name: popupAddTitle.value,
-      link: popupAddLink.value
-    }
-    cardList.addItem(renderCard(data))
-    newCardFormPopup.close();
-  }
-  
+ //function handleFormSubmit() {
+ // const data = {
+   //  name: popupAddTitle.value,
+  //    link: popupAddLink.value
+  //  }
+  //  cardList.addItem(renderCard(data))
+  //  newCardFormPopup.close();
+  //}
+ const newCardFormPopup = new PopupWithForm({ selectorPopup: (".popup_card_add"), handleFormSubmit: (data) => {
+  cardList.addItem(renderCard(data));
+  newCardFormPopup.close();
+}});
+
+
+
   newCardFormPopup.setEventListeners();
   popupOpenAddButton.addEventListener('click', () => {
+    validationPopupAdd.resetValidation();
     newCardFormPopup.open();
   })
 const userInfo = new UserInfo({ selectorName: (".profile__title"), selectorProf: (".profile__subtitle")});
